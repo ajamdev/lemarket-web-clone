@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components'
+interface Props {
+	nameIcon: string
+	baget: string
+	title: string
+	description: string
+	link: string
+}
+
+const { nameIcon, baget, title, description, link } = Astro.props
+---
+
+<article class="p-6 border-gray-800 border-2 rounded-lg lg:hover:border-purple-500 transition-all duration-300 ease-in ">
+	<Icon name={nameIcon} class='size-10 backdrop-blur-sm bg-purple-500/25 p-2 text-purple-400 rounded-lg mb-4'/>
+	<small class="bg-purple-500/25 px-2 py-1 rounded-full text-purple-400">{baget}</small>
+	<h3 class="text-h4 my-h4">{title}</h3>
+	<p class="mb-p text-p text-gray-400 text-pretty">{description}</p>
+	<a href={link} class="inline-flex text-purple-700 items-center space-x-2"><span>Conoce más</span> <Icon name="mdi:arrow-right" /></a>
+</article>

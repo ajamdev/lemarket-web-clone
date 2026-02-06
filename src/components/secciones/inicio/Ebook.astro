@@ -1,0 +1,50 @@
+---
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class='h-auto lg:py-8'>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+		<div>
+			<header>
+				<span class="uppercase text-purple-500">sobre nosotros</span>
+				<h2 class="text-h2 my-h2 font-bold text-balance">
+					Tu máquina generadora de <span class="text-purple-500"
+						>leads = clientes potenciales</span
+					>
+				</h2>
+			</header>
+			<p class="text-p mb-p text-pretty">
+				Mientras tú y tu equipo se centran en brindar una excelente atención a
+				tus clientes y cerrar ventas, nosotros nos encargamos de buscar y atraer
+				prospectos listos para comprar.
+			</p>
+			<p class="text-p text-pretty">
+				Contamos con estrategias innovadoras y las herramientas más avanzadas
+				para captar la atención de tu público objetivo. El resultado: un flujo
+				constante de leads de calidad, convirtiéndolos en valiosas oportunidades
+				de negocio reales.
+			</p>
+		</div>
+		<div class="flex justify-center md:justify-end">
+			<div class="bg-white p-6 rounded-3xl shadow-xl w-full max-w-max mx-auto">
+				<Icon
+					name="download"
+					class="size-12 bg-purple-100 text-purple-500 rounded-lg p-2"
+				/>
+				<h4 class="text-h4 my-h4 font-bold">¡Mejora tu estrategia de ventas!</h4>
+				<p class="text-p mb-p text-pretty">
+					Descarga ahora nuestro E-book <strong
+						>"Los 5 Pilares para la Generación de Leads B2B realmente
+						Calificados"</strong
+					> y descubre cómo obtener resultados excepcionales.
+				</p>
+				<a href="" class="flex items-center space-x-2 bg-purple-500 text-purple-50 justify-center px-8 py-3 rounded-full"><span>Descargar E-book</span> <Icon name="download" /></a
+				>
+				<div class="flex justify-center pt-6">
+					<small class="text-gray-500">Sin spam. Solo contenido de valor para tu negocio.</small>
+				</div>
+			</div>
+		</div>
+	</div>
+</Section>

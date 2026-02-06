@@ -1,0 +1,26 @@
+{
+  "name": "lemarket-clone",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "Angelo Almeida",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "astro-icon": "^1.1.5",
+    "gsap": "3.14.2",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "1.2.3",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1"
+  }
+}

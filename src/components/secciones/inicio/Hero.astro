@@ -1,0 +1,100 @@
+---
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+import Chart from './Chart.astro'
+import Link from '@/components/UI/Link.astro'
+---
+
+<Section class="h-auto lg:h-dvh">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center w-full h-full">
+		<div>
+			<header>
+				<span
+					class="flex items-center text-sm font-medium text-purple-500 bg-purple-50 max-w-max px-5 py-2 rounded-full">
+					<Icon name="mdi:trending-up" />
+					+15.000 leads generados en campañas B2B
+				</span>
+				<h1 class="text-h1 my-h1 text-balance font-bold">
+					Más conversaciones, <span class="text-purple-500">más ventas</span>
+				</h1>
+			</header>
+			<p class="text-p mb-p text-pretty">
+				Atraemos prospectos empresariales de alta calidad mientras tu equipo de
+				ventas se enfoca en lo que mejor sabe hacer: cerrar negocios.
+			</p>
+			<nav class="flex flex-col md:flex-row lg:pt-6 gap-3 lg:gap-5 py-6">
+				<Link
+					href="/"
+					label="Agenda una reunión"
+					style="primary"
+					icon={{
+						name: 'mdi:arrow-right',
+						side: 'right'
+					}}
+				/>
+				<Link href="/" label="Conoce más" style="secondary" />
+			</nav>
+			<footer class="flex flex-row space-x-6 pt-6 border-t-2 border-gray-200">
+				<div>
+					<span class="counter-value text-4xl font-bold">0x</span>
+					<p class="text-sm text-gray-500">Más leads calificados</p>
+				</div>
+				<div>
+					<span class="counter-value-companies text-4xl font-bold">+0</span>
+					<p class="text-sm text-gray-500">Empresas atendidas</p>
+				</div>
+				<div>
+					<span class="counter-value-client text-4xl font-bold">0%</span>
+					<p class="text-sm text-gray-500">Satisfacción</p>
+				</div>
+			</footer>
+		</div>
+		<div class="flex justify-center md:justify-end">
+			<Chart />
+		</div>
+	</div>
+</Section>
+
+<script>
+	import { gsap } from 'gsap'
+
+	const counter = document.querySelector('.counter-value')
+	const counterCompanies = document.querySelector('.counter-value-companies')
+	const counterClient = document.querySelector('.counter-value-client')
+
+	if (counter) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 3.5,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				counter.textContent = obj.value.toFixed(1) + 'x'
+			}
+		})
+	}
+
+	if (counterCompanies) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 200,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				counterCompanies.textContent = '+' + Math.round(obj.value)
+			}
+		})
+	}
+
+	if (counterClient) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 98,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				counterClient.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+</script>

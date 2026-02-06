@@ -1,0 +1,90 @@
+---
+
+---
+
+<form class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+	<h3 class="font-bold text-xl mb-6 text-gray-900">
+		Cuéntanos sobre tu negocio
+	</h3>
+
+	<div class="space-y-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="flex flex-col gap-1">
+				<label for="nombre" class="text-sm font-medium text-gray-700"
+					>Nombre</label
+				>
+				<input
+					type="text"
+					id="nombre"
+					name="nombre"
+					placeholder="Tu nombre"
+					class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder-gray-400"
+				/>
+			</div>
+			<div class="flex flex-col gap-1">
+				<label for="apellido" class="text-sm font-medium text-gray-700"
+					>Apellido</label
+				>
+				<input
+					type="text"
+					id="apellido"
+					name="apellido"
+					placeholder="Tu apellido"
+					class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder-gray-400"
+				/>
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-1">
+			<label for="email" class="text-sm font-medium text-gray-700"
+				>Email corporativo</label
+			>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				placeholder="tu@empresa.com"
+				class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder-gray-400"
+			/>
+		</div>
+
+		<div class="flex flex-col gap-1">
+			<label for="empresa" class="text-sm font-medium text-gray-700"
+				>Empresa</label
+			>
+			<input
+				type="text"
+				id="empresa"
+				name="empresa"
+				placeholder="Nombre de tu empresa"
+				class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder-gray-400"
+			/>
+		</div>
+
+		<div class="flex flex-col gap-1">
+			<label for="desafio" class="text-sm font-medium text-gray-700"
+				>¿Cuál es tu principal desafío?</label
+			>
+			<textarea
+				id="desafio"
+				name="desafio"
+				rows="3"
+				placeholder="Cuéntanos brevemente..."
+				class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder-gray-400 resize-none"
+			></textarea>
+		</div>
+
+		<button
+			type="submit"
+			class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition-colors mt-2">
+			Enviar solicitud
+		</button>
+
+		<p class="text-center text-xs text-gray-500 mt-4">
+			Al enviar este formulario, aceptas nuestra <a
+				href="#"
+				class="text-purple-600 hover:underline">política de privacidad</a
+			>.
+		</p>
+	</div>
+</form>

@@ -1,0 +1,22 @@
+---
+import CardProce from '@/components/CardProce.astro'
+import Section from '@/components/UI/Section.astro'
+import { PROCES } from '@/lib/const/proces'
+---
+
+<Section class="lg:py-8">
+	<header class="text-center">
+		<span class="text-purple-500 uppercase">Nuestro proceso</span>
+		<h2 class="text-h2 my-h2 text-balance font-bold max-w-lg mx-auto">
+			Cómo LeMarket impulsa tu negocio para <span class="text-purple-500"
+				>expandir tus ventas</span>
+		</h2>
+	</header>
+	<footer class="grid grid-cols-1 lg:grid-cols-4 gap-5 pt-8 relative">
+		{
+      PROCES.map((proce) => (
+        <CardProce {...proce} />
+      ))
+    }
+	</footer>
+</Section>

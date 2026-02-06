@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  --text-h1: clamp(2.25rem, 5vw, 3rem);
+  --spacing-h1: 0.67rem;
+
+  --text-h2: clamp(1.5rem, 3vw, 2rem);
+  --spacing-h2: 0.83rem;
+
+  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --spacing-h3: 1rem;
+
+  --text-h4: clamp(1rem, 2vw, 1.25rem);
+  --spacing-h4: 1.33rem;
+
+  --text-h5: clamp(1rem, 2vw, 1.25rem);
+  --spacing-h5: 1.67rem;
+
+  --text-h6: clamp(0.875rem, 2vw, 1rem);
+  --spacing-h6: 1rem;
+
+  --text-p: clamp(0.875rem, 2vw, 1rem);
+  --spacing-p: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+  width: 100%;
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 95% /* 768px */;
+  }
+  @media (width >= 64rem /* 1024px */) {
+    max-width: 95% /* 1024px */;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 95% /* 1280px */;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 80% /* 1536px */;
+  }
+}

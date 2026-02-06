@@ -1,0 +1,24 @@
+---
+import CardServices from '@/components/CardServices.astro'
+import Section from '@/components/UI/Section.astro'
+import { SERVICES } from '@/lib/const/services'
+
+
+---
+
+<Section class="bg-gray-950 lg:py-8 text-gray-50">
+	<header>
+		<span class="text-purple-500 uppercase text-center block"
+			>Nuestros servicios</span
+		>
+		<h2 class="text-h2 font-bold max-w-lg mx-auto text-center">
+			Impulsa las ventas de tu empresa con <span class="text-purple-500"
+				>más clientes potenciales</span>
+		</h2>
+	</header>
+	<footer class="pt-6 grid grid-cols-1 lg:grid-cols-3 gap-5">
+		
+			{SERVICES.map((service) => <CardServices {...service} />)}
+	
+	</footer>
+</Section>

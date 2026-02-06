@@ -1,0 +1,65 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+import ContactForm from './ContactForm.astro'
+
+const items = [
+	{
+		name: 'Entender tus metas de ventas o posicionamiento digita'
+	},
+	{
+		name: 'Comprender tu estructura de ventas y tu ecosistema digital'
+	},
+	{
+		name: 'Diseñar los próximos pasos para superar tus desafíos en captación de oportunidades B2B.'
+	}
+]
+---
+
+<Section>
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+		<div>
+			<header>
+				<span class="uppercase flex items-center space-x-4 text-purple-500"
+					><small>
+						<Icon name="calendar" />
+					</small><small>agenda una consultoria</small></span
+				>
+				<h2 class="text-h2 mb-2 font-bold text-balance">
+					La manera más ágil de captar <span class="text-purple-500"
+						>prospectos empresariales</span
+					>
+				</h2>
+			</header>
+			<p class="text-pretty text-p my-p">
+				Déjanos guiarte en el camino correcto para encontrar los tomadores de
+				decisión correctos y cerrar más y mejores negocios B2B.
+			</p>
+			<h6 class="text-h6 my-h6 font-bold">¿Qué esperar de esta reunión?</h6>
+			<ul class="space-y-2">
+				{
+					items.map((item) => (
+						<li class="flex space-x-2">
+							<>
+								<Icon name="checkbox" class="text-purple-800" />
+								<span class="text-p">{item.name}</span>
+							</>
+						</li>
+					))
+				}
+			</ul>
+			<div class="pt-6">
+				<Link
+					href="#"
+					label="Agenda con un experto"
+					style="primary"
+					icon={{ name: 'mdi:arrow-right', side: 'right' }}
+				/>
+			</div>
+		</div>
+		<div>
+			<ContactForm />
+		</div>
+	</div>
+</Section>

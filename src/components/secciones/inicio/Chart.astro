@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="bg-white p-6 rounded-3xl shadow-xl w-full max-w-md mx-auto">
+	<div class="flex items-start gap-4 mb-8">
+		<div class="bg-purple-100 p-3 rounded-full text-purple-600">
+			<Icon name="mdi:target-arrow" class="size-6" />
+		</div>
+		<div>
+			<h3 class="font-bold text-lg leading-tight">Leads este mes</h3>
+			<p class="text-sm text-gray-500 font-medium">+42% vs mes anterior</p>
+		</div>
+	</div>
+
+	<!-- Chart Bars -->
+	<div class="flex items-end justify-between h-40 gap-2 px-1">
+		<div class="w-full bg-purple-200 rounded-t-lg h-[30%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[50%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[35%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[60%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[45%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[75%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[65%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[80%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[70%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[85%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[75%]"></div>
+		<div class="w-full bg-purple-200 rounded-t-lg h-[95%]"></div>
+	</div>
+
+	<!-- Complementary Data -->
+	<div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-gray-100">
+		<div>
+			<p class="text-sm text-gray-400 mb-1">Tasa de Conversión</p>
+			<div class="flex items-end gap-2">
+				<span class="text-2xl font-bold text-gray-800">4.8%</span>
+				<span
+					class="text-xs text-green-500 font-medium mb-1.5 flex items-center">
+					<Icon name="mdi:arrow-up" class="size-3" /> 2.1%
+				</span>
+			</div>
+		</div>
+		<div>
+			<p class="text-sm text-gray-400 mb-1">Costo por Lead</p>
+			<div class="flex items-end gap-2">
+				<span class="text-2xl font-bold text-gray-800">$12,50</span>
+				<span
+					class="text-xs text-green-500 font-medium mb-1.5 flex items-center">
+					<Icon name="mdi:arrow-down" class="size-3" /> 5.4%
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

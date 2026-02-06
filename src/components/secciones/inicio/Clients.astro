@@ -1,0 +1,70 @@
+---
+import Section from '@/components/UI/Section.astro'
+import { CLIENTS } from '@/lib/const/clients'
+---
+
+<Section class="lg:py-8">
+	<header class="text-center">
+		<span class="uppercase text-purple-500"
+			>Clientes que confían en nosotros</span
+		>
+		<h2 class="my-h2 text-h2 font-bold max-w-xl mx-auto text-balance">
+			Empresas que hicieron crecer sus negocios con{' '}
+			<span class="text-purple-500">estrategias de impacto</span>
+		</h2>
+	</header>
+
+	<div
+		class="mt-10 overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+		<div class="flex space-x-5 animate-scroll">
+			{
+				CLIENTS.map(({ name, icon }) => (
+					<div class="flex items-center">
+						<span class="sr-only">{name}</span>
+						<icon.name class="size-14 text-gray-500" />
+					</div>
+				))
+			}
+			{
+				CLIENTS.map(({ name, icon }) => (
+					<div class="flex items-center shrink-0">
+						<span class="sr-only">{name}</span>
+						<icon.name class="size-14 text-gray-500" />
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	<footer class="pt-6 flex flex-col justify-center items-center">
+		<p class="text-center text-p my-p text-gray-400">Industrias en las que hemos generado resultados:</p>
+		<ul class="flex flex-wrap gap-5 ">
+			<li class="px-5 py-2 bg-gray-200 text-gray-700 rounded-full">Tecnología</li>
+			<li class="px-5 py-2 bg-gray-200 text-gray-700 rounded-full">Salud</li>
+			<li class="px-5 py-2 bg-gray-200 text-gray-700 rounded-full">Finanzas</li>
+			<li class="px-5 py-2 bg-gray-200 text-gray-700 rounded-full">Alimentos</li>
+			<li class="px-5 py-2 bg-gray-200 text-gray-700 rounded-full">Manufactura</li>
+		</ul>
+	</footer>
+</Section>
+
+<style>
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	.animate-scroll {
+		animation: scroll 30s linear infinite;
+		width: max-content;
+	}
+
+	/* Pausa la animación al hacer hover */
+	#carousel:hover .animate-scroll {
+		animation-play-state: paused;
+	}
+</style>
