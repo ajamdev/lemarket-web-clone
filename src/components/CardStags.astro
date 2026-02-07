@@ -1,0 +1,69 @@
+---
+interface Props {
+	description: string
+	classList: string
+}
+
+const { description, classList } = Astro.props
+---
+
+<article class="flex flex-col items-center justify-center w-full h-full p-6 bg-gray-900/50 rounded-xl">
+	<span class={`text-4xl font-bold text-purple-900 ${classList}`}> 0 </span>
+	<p class="text-center text-gray-300 text-p mt-p">{description}</p>
+</article>
+
+<script>
+	import { gsap } from 'gsap/gsap-core'
+	const valueTime = document.querySelector('.time')
+	const valueCompradores = document.querySelector('.compradores')
+	const valueCorreos = document.querySelector('.correos')
+	const valueSeguimiento = document.querySelector('.seguimiento')
+
+	if (valueTime) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 36,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				valueTime.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+
+	if (valueCompradores) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 65,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				valueCompradores.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+
+	if (valueCorreos) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 95,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				valueCorreos.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+
+	if (valueSeguimiento) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 80,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				valueSeguimiento.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+</script>
