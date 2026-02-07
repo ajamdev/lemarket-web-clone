@@ -1,0 +1,24 @@
+---
+import CardStags from '@/components/CardStags.astro'
+import Section from '@/components/UI/Section.astro'
+import { STAGS } from '@/lib/const/stags'
+---
+
+<Section class="lg:py-8 bg-gray-950 text-gray-50">
+	<div class="flex flex-col items-center justify-center">
+		<header>
+			<h2 class="text-h2 mb-h2 max-w-lg text-center text-balance">
+				La venta tradicional ya no es suficiente en el sector
+				<span class="text-purple-500">B2B</span>
+			</h2>
+		</header>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-6">
+			{STAGS.map((stag) => <CardStags {...stag} />)}
+		</div>
+		<p class="text-center text-gray-300 text-p mb-p text-pretty">
+			Para ya de mantener a tus vendedores al telefono tratando de captar
+			prospectos calificados.
+		</p>
+		<p class="text-center text-purple-500 font-bold text-pretty">Entregalos una estrategia realmente efectiva y automatizada.</p>
+	</div>
+</Section>

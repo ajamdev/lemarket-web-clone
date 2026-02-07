@@ -1,0 +1,27 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class='h-dvh'>
+	<div class="flex flex-col justify-center items-center w-full h-full">
+    <header class="flex flex-col justify-center items-center">
+      <span class="flex items-center space-x-2 bg-purple-300 text-center max-w-max px-6 py-1 text-purple-900 rounded-full">
+        <Icon name="clock" />
+        <span>Resultados en solo 6 semanas</span>
+      </span>
+      <h1 class="text-h1 font-bold text-center my-h1 text-balance max-w-lg">Instala una <span class="text-purple-500">maquina de ventas</span> en tu empresa</h1>
+    </header>
+    <p class="text-center text-p text-pretty mb-p max-w-lg">
+      Ahorra mas del 70% del tiempo en tareas operativas de prospeccion y aumenta
+      hasta 3.5 veces los cierres con prospectos listos para comprar.
+    </p>
+      <div class="pt-6">
+        <Link href='#' label='Agenda con un consultor' style='primary' icon={{
+          name:"mdi:arrow-right",
+          side:"right"
+        }}/>
+      </div>
+  </div>
+</Section>
