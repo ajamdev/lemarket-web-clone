@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@theme {
+@theme inline {
   --text-h1: clamp(2.25rem, 5vw, 3rem);
   --spacing-h1: 0.67rem;
 
@@ -21,10 +21,13 @@
 
   --text-p: clamp(0.875rem, 2vw, 1rem);
   --spacing-p: 1rem;
+
+  --font-serif: 'Playfair Display', 'Playfair Display Fallback', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+  font-family: var(--font-serif);
 }
 
 .container {
