@@ -1,0 +1,47 @@
+---
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+
+const items = [
+	{
+		item: 'Entender tus metas de ventas o posicionamiento digital'
+	},
+	{
+		item: 'Comprender tu estructura de ventas y tu ecosistema digital'
+	},
+	{
+		item: 'Disenar los proximos pasos para superar tus desafios en captacion de oportunidades B2B'
+	}
+]
+---
+
+<Section>
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+		<div>
+			<header>
+				<span class="uppercase text-purple-500">predice y escala</span>
+				<h2 class="text-h2 text-balance my-h2 font-bold">
+					<span>La manera mas agil de captar</span>
+					<span class="text-purple-500">prospectos empresariales</span>
+				</h2>
+			</header>
+			<p class="text-p mb-p text-pretty">
+				Sacale el maximo provecho a LinkedIn y la Inteligencia Artificial con el
+				poder de la marca personal de tus vendedores. Agenda ahora con un
+				consultor y obtiene un analisis personalizado de tu demanda en LinkedIn.
+			</p>
+			<h6 class="text-h6 mb-h6 font-bold">Que esperar de esta reunion:</h6>
+			<ul class="space-y-2">
+				{
+					items.map(({ item }) => (
+						<li class="flex space-x-2">
+							<Icon name="checkbox" class="size-4 text-purple-500 shrink-0" />
+							<p class="text-p">{item}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div></div>
+	</div>
+</Section>
