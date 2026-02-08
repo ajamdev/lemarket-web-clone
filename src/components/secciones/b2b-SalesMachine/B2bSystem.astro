@@ -1,0 +1,22 @@
+---
+import CardSystem from "@/components/CardSystem.astro";
+import Section from "@/components/UI/Section.astro";
+import { SYSTEMS } from "@/lib/const/system";
+---
+
+<Section class="lg:py-8">
+  <header class="text-center">
+    <span class="text-purple-500 uppercase">nuestro sistema</span>
+    <h2 class="text-h2 my-h2 font-bold text-balance">
+      <span>4 simples pasos para</span>
+      <span class="text-purple-500">transformar tus ventas</span>
+    </h2>
+  </header>
+  <footer class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
+    {
+      SYSTEMS.map((item)=>(
+        <CardSystem {...item} />
+      ))
+    }
+  </footer>
+</Section>
