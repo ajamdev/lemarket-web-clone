@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components"
+
+interface Beneficio {
+	iconName: string
+	title: string
+	description: string
+}
+
+const { iconName, title, description } = Astro.props as Beneficio
+---
+
+<article class="p-6 bg-white rounded-2xl group lg:hover:shadow-xl transition-all duration-300 w-full h-full">
+  <Icon name={iconName} class="text-purple-600 bg-purple-200 group-hover:bg-purple-300 size-10 p-2 rounded-lg transition-all duration-300"/>
+  <h3 class="text-h3 my-h3 font-bold">{title}</h3>
+  <p class="text-p text-pretty">{description}</p>
+</article>
