@@ -22,6 +22,9 @@
   --text-p: clamp(0.875rem, 2vw, 1rem);
   --spacing-p: 1rem;
 
+  --text-span: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-span: 0.5rem;
+
   --font-serif: 'Playfair Display', 'Playfair Display Fallback', serif;
 }
 
