@@ -1,4 +1,5 @@
 ---
+import Link from '@/components/UI/Link.astro'
 import Section from '@/components/UI/Section.astro'
 import { Icon } from 'astro-icon/components'
 
@@ -15,7 +16,7 @@ const items = [
 ]
 ---
 
-<Section>
+<Section class="lg:py-8">
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
 		<div>
 			<header>
@@ -41,7 +42,72 @@ const items = [
 					))
 				}
 			</ul>
+			<nav class="pt-6 flex flex-col gap-5 lg:flex-row">
+				<Link
+					label="Agenda ahora"
+					href="#"
+					style="primary"
+					icon={{
+						name: 'phone',
+						side: 'left'
+					}}
+				/>
+				<Link
+					label="Escribenos"
+					href="#"
+					style="secondary"
+					icon={{
+						name: 'mail',
+						side: 'left'
+					}}
+				/>
+			</nav>
 		</div>
-		<div></div>
+		<div>
+			<div class="w-full max-w-lg mx-auto p-7 bg-white shadow-xl rounded-xl overflow-hidden">
+				<h3 class="text-h3 font-bold mb-h3">Solicita tu analisis gratuito</h3>
+				<form class="grid grid-cols-2 gap-5">
+					<div class="flex flex-col space-y-2">
+						<label for="name">Nombre</label>
+						<input class="w-full h-10 px-5 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:border-2 focus:shadow-sm focus:shadow-purple-300" type="text" placeholder="Tu nombre" id="name" />
+					</div>
+					<div class="flex flex-col space-y-2">
+						<label for="lastname">Apellido</label>
+						<input class="w-full h-10 px-5 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:border-2 focus:shadow-sm focus:shadow-purple-300" type="text" placeholder="Tu apellido" id="lastname" />
+					</div>
+					<div class="col-span-2 flex flex-col space-y-2">
+						<label for="email">Correo</label>
+						<input class="w-full h-10 px-5 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:border-2 focus:shadow-sm focus:shadow-purple-300" type="email" placeholder="Tu correo" id="email" />
+					</div>
+					<div class="col-span-2 flex flex-col space-y-2">
+						<label for="company">Empresa</label>
+						<input class="w-full h-10 px-5 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:border-2 focus:shadow-sm focus:shadow-purple-300" type="text" placeholder="Tu empresa" id="company" />
+					</div>
+					<div class="col-span-2 flex flex-col space-y-2">
+						<label for="teamSize">Tamaño del equipo de ventas</label>
+						<select class="w-full h-10 px-5 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:border-2 focus:shadow-sm focus:shadow-purple-300"  name="teamSize" id="teamSize">
+							<option value="">Selecciona una opcion</option>
+							<option value="1">1</option>
+							<option value="2-5">2-5</option>
+							<option value="6-10">6-10</option>
+							<option value="11-20">11-20</option>
+							<option value="21-50">21-50</option>
+							<option value="51-100">51-100</option>
+							<option value="101-200">101-200</option>
+							<option value="201-500">201-500</option>
+							<option value="501-1000">501-1000</option>
+							<option value="1001+">1001+</option>
+						</select>
+					</div>
+					<div class="col-span-2 py-5"><button class="w-full bg-purple-500 text-purple-50 py-3 rounded-xl font-semibold" type="submit">Solicitar analisis</button></div>
+				</form>
+				<div class="text-center">
+					<small
+						><span>Al enviar este formulario, aceptas nuestra</span>
+						<a href="" class="font-semibold text-purple-500">politica de privacidad.</a></small
+					>
+				</div>
+			</div>
+		</div>
 	</div>
 </Section>
