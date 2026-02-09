@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Angelo Almeida",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.29.2",
   "dependencies": {
     "@tailwindcss/vite": "4.1.18",
     "astro": "5.17.1",

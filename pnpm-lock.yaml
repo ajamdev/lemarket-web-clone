@@ -9,19 +9,19 @@ importers:
   .:
     dependencies:
       '@tailwindcss/vite':
-        specifier: ^4.1.18
+        specifier: 4.1.18
         version: 4.1.18(vite@6.4.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.30.2))
       astro:
-        specifier: ^5.17.1
+        specifier: 5.17.1
         version: 5.17.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)
       astro-icon:
-        specifier: ^1.1.5
+        specifier: 1.1.5
         version: 1.1.5
       gsap:
         specifier: 3.14.2
         version: 3.14.2
       tailwindcss:
-        specifier: ^4.1.18
+        specifier: 4.1.18
         version: 4.1.18
     devDependencies:
       '@iconify-json/mdi':
