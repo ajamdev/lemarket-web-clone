@@ -1,0 +1,49 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class="h-dvh">
+	<div class="flex flex-col justify-center items-center w-full h-full">
+		<header class="flex flex-col justify-center items-center">
+			<div
+				class="inline-flex items-center gap-x-2 px-3 py-1 rounded-full border border-purple-500/10 bg-purple-500/5 text-xs font-medium text-purple-500/90">
+				<Icon name="tabler:microphone" class="size-4" />
+				<span>Marca Digital para líderes B2B</span>
+			</div>
+			<h1 class="text-center text-h1 my-h1 font-bold text-balance">
+				<span>Desata el poder de tu</span>
+				<span class="text-purple-500">voz experta</span>
+				<span>para impactar en tu empresa</span>
+			</h1>
+		</header>
+		<p class="text-center text-pretty text-p my-p w-full max-w-2xl mx-auto">
+			El B2B nunca fue mas humano. La marca personal de los lideres esta
+			generando mayor efectividad en las estrategias de marketing de las
+			empresas.
+		</p>
+		<footer class="w-full pt-5">
+			<nav class="flex flex-col lg:flex-row gap-5 justify-center">
+				<Link
+					label="Habla con un experto"
+					href="#"
+					style="primary"
+					icon={{
+						name: 'tabler:arrow-right',
+						side: 'right'
+					}}
+				/>
+				<Link
+					label="Ver masterclass"
+					href="#"
+					style="secondary"
+					icon={{
+						name: 'tabler:play',
+						side: 'left'
+					}}
+				/>
+			</nav>
+		</footer>
+	</div>
+</Section>
