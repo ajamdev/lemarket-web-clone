@@ -1,0 +1,53 @@
+---
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+
+const WHAT_WE_DO = [
+	{
+		icon: 'tabler:share',
+		title: 'Optimizacion y Gestion de Redes Sociales',
+		description:
+			'Transformamos tus perfiles sociales en plataformas de autoridad que atraen a tu audiencia ideal y generan conversaciones de valor.'
+	},
+	{
+		icon: 'tabler:book',
+		title: 'Creacion de Contenido de Valor',
+		description:
+			'Desarrollamos contenido estrategico que posiciona tu experiencia y experticia, generando confianza con tus prospectos.'
+	},
+	{
+		icon: 'lucide:graduation-cap',
+		title: 'Talleres y Entrenamiento',
+		description:
+			'Capacitamos a tus lideres y equipos en las mejores practicas de marca personal digital para el sector B2B.'
+	},
+	{
+		icon: 'tabler:compass',
+		title: 'Mentoria Personalizada',
+		description:
+			'Acompanamiento uno a uno para construir y mantener tu posicionamiento como voz experta en tu industria.'
+	}
+]
+---
+
+<Section class="lg:py-8">
+	<header class="flex flex-col items-center justify-center">
+		<span class="text-purple-500 uppercase">Lo que hacemos</span>
+		<h2 class="text-h2 text-balance w-full max-w-lg font-bold my-h2 mx-auto text-center">
+			<span>Construimos tu</span>
+			<span class="text-purple-500">presencia digital</span>
+			<span>como estrategia</span>
+		</h2>
+	</header>
+	<footer class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-6">
+		{
+			WHAT_WE_DO.map(({ icon, title, description }) => (
+				<article class="bg-white rounded-2xl p-8 w-full h-full border border-gray-300 lg:hover:shadow-xl transition-all duration-300">
+					<Icon name={icon} class="bg-purple-500/15 text-purple-600 size-12 p-2 rounded-lg"/>
+					<h3 class="text-h3 font-bold my-h3 text-balance">{title}</h3>
+					<p class="text-balance text-p text-gray-600">{description}</p>
+				</article>
+			))
+		}
+	</footer>
+</Section>
