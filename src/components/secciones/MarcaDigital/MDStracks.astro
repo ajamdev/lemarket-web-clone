@@ -1,0 +1,91 @@
+---
+import Section from '@/components/UI/Section.astro'
+
+const data = [
+	{
+		description:
+			'De los compradores confian en las recomendaciones de una empresa.',
+		className: 'empresa'
+	},
+	{
+		description:
+			'De los compradores confian mas en las recomendaciones de personas.',
+		className: 'persona'
+	},
+	{
+		description:
+			'Mas rapido captan la atencion de tomadores de decision nuestros clientes.',
+		className: 'tomadoresDecision'
+	}
+]
+---
+
+<Section class="bg-gray-950 lg:py-8 text-gray-50">
+	<header class="w-full">
+		<h2
+			class="text-center text-h2 my-h2 font-bold text-balance w-full max-w-xl mx-auto">
+			<span>La confianza es la moneda mas valiosa en el</span>
+			<span class="text-purple-500">sector B2B</span>
+		</h2>
+	</header>
+	<p class="text-center text-p my-p text-pretty mx-auto w-full max-w-xl">
+		Segun Nielsen Company, los compradores confian mucho mas en las
+		recomendaciones de personas que en las de una empresa.
+	</p>
+	<footer class="grid grid-cols-1 md:grid-cols-3 gap-5">
+		{
+			data.map((item) => (
+				<article class="bg-gray-400/10 rounded-xl p-6 w-full h-full text-center">
+					<span class={`text-h1 font-bold text-purple-600 ${item.className}`}>
+						0
+					</span>
+					<p class="text-p my-p text-pretty text-gray-400">
+						{item.description}
+					</p>
+				</article>
+			))
+		}
+	</footer>
+</Section>
+
+<script>
+	import { gsap } from 'gsap'
+	const empresaValue = document.querySelector('.empresa')
+	const personaValue = document.querySelector('.persona')
+	const tomadoresDecisionValue = document.querySelector('.tomadoresDecision')
+
+	if (empresaValue) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 36,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				empresaValue.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+	if (personaValue) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 90,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				personaValue.textContent = Math.round(obj.value) + '%'
+			}
+		})
+	}
+
+	if (tomadoresDecisionValue) {
+		const obj = { value: 0 }
+		gsap.to(obj, {
+			value: 10,
+			duration: 2,
+			ease: 'power2.out',
+			onUpdate: () => {
+				tomadoresDecisionValue.textContent = obj.value.toLocaleString() + 'x'
+			}
+		})
+	}
+</script>
