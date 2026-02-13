@@ -1,0 +1,85 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+
+const vision = [
+	{
+		description: 'Visibilidad como referente en tu sector'
+	},
+	{
+		description: 'Autoridad y confianza ante tomadores de decision'
+	},
+	{
+		description: 'Conexiones estrategicas de alto valor'
+	},
+	{
+		description: 'Contenido que diferencia tu marca'
+	},
+	{
+		description: 'Crecimiento organico y sostenible'
+	}
+]
+---
+
+<Section class="lg:py-8">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+		<div>
+			<header>
+				<span class="text-purple-500 uppercase font-semibold"
+					>Nuestra visión</span
+				>
+				<h2 class="text-balance text-h2 font-bold my-h2">
+					<span>Te convertimos en la</span>
+					<span class="text-purple-500">voz experta</span>
+					<span>de tu sector</span>
+				</h2>
+			</header>
+			<div class="text-pretty space-y-p">
+				<p>
+					En LeMarket entendemos que en el sector B2B es trascendental generar
+					confianza. Por eso, destacamos la autenticidad y el poder de la
+					experticia de tus colaboradores y lideres de tu empresa.
+				</p>
+				<p>
+					La convertimos en una marca con el poder de diferenciarse y destacarse
+					en tu sector industrial. Potenciamos tu visibilidad, autoridad y
+					conexiones estrategicas a traves de contenido, presencia en redes y
+					relaciones estrategicas.
+				</p>
+			</div>
+			<div class="pt-5">
+				<Link
+					href="/contacto"
+					label="Comenzar ahora"
+					icon={{
+						name: 'tabler:arrow-right',
+						side: 'right'
+					}}
+					style="primary"
+				/>
+			</div>
+		</div>
+		<div>
+			<div class="p-6 rounded-2xl bg-white mx-auto w-full max-w-lg">
+				<div class="flex items-center gap-x-5 mb-h3">
+					<Icon name="tabler:award" class="size-12 bg-purple-500/15 text-purple-500 rounded-lg p-2"/>
+					<div>
+						<h3 class="text-h3 font-bold text-balance">Posicionate como lider influyente</h3>
+						<p class="text-pretty text-gray-400">Impulsa el crecimiento de tu negocio B2B</p>
+					</div>
+				</div>
+				<ul class="space-y-p">
+					{
+						vision.map((item) => (
+							<li class="flex gap-3 items-center bg-purple-500/15 rounded-full px-4 py-2">
+								<Icon name="lucide:circle-check-big" class="text-purple-500 shrink-0"/>
+								<span>{item.description}</span>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+</Section>
