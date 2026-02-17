@@ -1,0 +1,24 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class='lg:py-8 bg-gray-950 text-gray-50'>
+	<header class="text-center flex flex-col justify-center items-center max-w-3xl mx-auto">
+		<Icon name="tabler:microphone" class='size-12 bg-purple-500/20 p-2 rounded-xl text-purple-500'/>
+		<h2 class="text-h2 my-h2 text-balance font-bold">
+			Convierte a tu empresa en la proxima <span class="text-purple-500">Voz Experta</span> de tu sector
+		</h2>
+	</header>
+	<div class="mx-auto max-w-4xl text-center">
+		<p class="text-p my-p text-pretty">
+			Agenda con un experto y descubre como la marca digital de tus lideres
+			puede impactar directamente en las cifras de tu empresa.
+		</p>
+    <Link href='#' label='Agenda con un experto' style='primary' icon={{
+      name:'tabler:arrow-right',
+      side:'right'
+    }}/>
+	</div>
+</Section>

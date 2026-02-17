@@ -1,0 +1,31 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class="lg:py-8 bg-purple-500 text-gray-50">
+	<header
+		class="text-center max-w-3xl mx-auto flex flex-col items-center justify-centet">
+		<div
+			class="inline-flex items-center gap-x-2 px-3 py-1 rounded-full border border-purple-100/10 bg-purple-50/25 text-xs font-medium">
+			<Icon name="tabler:play" class="size-4" />
+			<span>Masterclass gratuita</span>
+		</div>
+		<h2 class="text-h2 my-h2 font-bold text-balance">
+			Descubre como posicionarte como lider influyente en tu industria
+		</h2>
+	</header>
+	<div class="mx-auto max-w-2xl text-center">
+		<p class="text-p text-pretty">
+			Accede a nuestra masterclass de voceria experta y aprende las estrategias
+			que estan transformando el B2B en Latinoamerica.
+		</p>
+	</div>
+	<div class="flex justify-center pt-6">
+		<a href="" class="inline-flex items-center gap-x-2 font-medium text-purple-500 bg-purple-50 rounded-full px-5 py-3">
+			<span>Quiero ver la masterclass</span>
+			<Icon name="tabler:arrow-right" class="size-4" />
+		</a>
+	</div>
+</Section>

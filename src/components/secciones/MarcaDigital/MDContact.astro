@@ -1,0 +1,120 @@
+---
+import Link from '@/components/UI/Link.astro'
+import Section from '@/components/UI/Section.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class="lg:py-8">
+	<div class="w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-5">
+		<div>
+			<header>
+				<span class="uppercase text-purple-500">Hablemos</span>
+				<h2 class="text-h2 font-bold text-balance my-h2">
+					Dejanos guiarte en el camino hacia el
+					<span class="text-purple-500">posicionamiento digital</span>
+				</h2>
+			</header>
+			<p class="text-p my-p text-pretty">
+				Encuentra los tomadores de decision correctos y cierra mas y mejores
+				negocios B2B con el poder de tu marca personal.
+			</p>
+			<footer>
+				<h6 class="font-medium text-h6 mb-h6">Que esperar de esta reunion:</h6>
+				<ul>
+					<li class="flex items-center gap-x-2">
+						<Icon
+							name="lucide:circle-check-big"
+							class="text-purple-500 size-4 shrink-0"
+						/>
+						<p>Entender tus metas de policionamiento digital</p>
+					</li>
+					<li class="flex items-center gap-x-2">
+						<Icon
+							name="lucide:circle-check-big"
+							class="text-purple-500 size-4 shrink-0"
+						/>
+						<p>Comprender tu estructura de comunicacion y liderazgo</p>
+					</li>
+					<li class="flex items-center gap-x-2">
+						<Icon
+							name="lucide:circle-check-big"
+							class="text-purple-500 size-4 shrink-0"
+						/>
+						<p>
+							Disenar los proximos pasos para posicionar a tus lideres como
+							referentes
+						</p>
+					</li>
+				</ul>
+				<nav class="flex flex-col gap-5 pt-6 lg:flex-row">
+					<Link
+						href="#"
+						label="Agendar reunión"
+						icon={{
+							name: 'tabler:phone',
+							side: 'left'
+						}}
+						style="primary"
+					/>
+					<Link
+						href="#"
+						label="Contactar en LinkedIn"
+						icon={{
+							name: 'linkedin',
+							side: 'left'
+						}}
+						style="secondary"
+					/>
+				</nav>
+			</footer>
+		</div>
+		<div>
+			<div class="w-full max-w-3xl mx-auto p-8 rounded-xl bg-gray-50">
+				<div>
+					<h3 class="text-h3 mb-h3 text-balance font-bold">Agenda tu consultoria gratis</h3>
+					<p class="text-p mb-p text-pretty">Cuentanos sobre tus objetivos de posicionamiento.</p>
+				</div>
+				<form class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+					<div class="col-span-2 lg:col-span-1 flex flex-col gap-y-2">
+						<label for="name">Nombre</label>
+						<input type="text" id="name" placeholder="Tu nombre" class="w-full h-10 border-2 border-gray-200 rounded-lg px-4 focus:border-purple-500 focus:outline-none focus:shadow-lg transition-all duration-300 ease-in-out"/>
+					</div>
+					<div class="col-span-1 flex flex-col gap-y-2">
+						<label for="lastName">Apellido</label>
+						<input type="text" id="lastName" placeholder="Tu apellido" class="w-full h-10 border-2 border-gray-200 rounded-lg px-4 focus:border-purple-500 focus:outline-none focus:shadow-lg transition-all duration-300 ease-in-out"/>
+					</div>
+					<div class="col-span-2 flex flex-col gap-y-2">
+						<label for="mail">Correo corporativo</label>
+						<input type="email" id="mail" placeholder="tu@empresa.com" class="w-full h-10 border-2 border-gray-200 rounded-lg px-4 focus:border-purple-500 focus:outline-none focus:shadow-lg transition-all duration-300 ease-in-out"/>
+					</div>
+					<div class="col-span-2 flex flex-col gap-y-2">
+						<label for="rol">Cargo</label>
+						<input type="text" id="rol" placeholder="Tu cargo" class="w-full h-10 border-2 border-gray-200 rounded-lg px-4 focus:border-purple-500 focus:outline-none focus:shadow-lg transition-all duration-300 ease-in-out"/>
+					</div>
+					<div class="col-span-2 flex flex-col gap-y-2">
+						<label for="primaryObject">Objetivo principal</label>
+						<select id="primaryObject" class="w-full h-10 border-2 border-gray-200 rounded-lg px-4 focus:border-purple-500 focus:outline-none focus:shadow-lg transition-all duration-300 ease-in-out">
+							<option value="">Selecciona</option>
+							<option value="posicionamiento"
+								>Aumentar mi visivilidad en LinkedIn</option
+							>
+							<option value="comunicacion"
+								>Posicionarme como referente en mi sector</option
+							>
+							<option value="liderazgo"
+								>Gestionar leads a traves de mi marca</option
+							>
+							<option value="liderazgo"
+								>Capacitar a mis lideres en marca digital</option
+							>
+						</select>
+					</div>
+					<button class="col-span-2 flex items-center gap-x-2 bg-purple-500 text-gray-50 justify-center py-2 rounded-full font-medium">
+						<Icon name="tabler:mail" />
+						<span>Agendar mi consultoria gratis</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</Section>
